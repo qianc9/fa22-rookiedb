@@ -34,15 +34,14 @@ public class CommandLineInterface {
     private Random generator;
 
     public static void main(String args[]) throws IOException {
-        // !// Basic database for project 0 through 3
-        // !Database db = new Database("demo", 25);
-        // !
-        // !// Use the following after completing project 4 (locking)
-        // !// Database db = new Database("demo", 25, new LockManager());
-        // !
-        // !// Use the following after completing project 5 (recovery)
-        // !// Database db = new Database("demo", 25, new LockManager(), new
-        // ClockEvictionPolicy(), true);
+        // Basic database for project 0 through 3
+        Database db = new Database("demo", 25);
+        
+        // Use the following after completing project 4 (locking)
+        // Database db = new Database("demo", 25, new LockManager());
+        
+        // Use the following after completing project 5 (recovery)
+        // Database db = new Database("demo", 25, new LockManager(), new ClockEvictionPolicy(), true);
 
         db.loadDemo();
 
@@ -198,8 +197,9 @@ public class CommandLineInterface {
             }
         } else {
             throw new IllegalArgumentException(String.format(
-                    "`%s` is not a valid metacommand",
-                    cmd));
+                "`%s` is not a valid metacommand",
+                cmd
+            ));
         }
     }
 
@@ -211,7 +211,7 @@ public class CommandLineInterface {
     private static List<String> startupMessages = Arrays
             .asList("Speaking with the buffer manager", "Saying grace hash",
                     "Parallelizing parking spaces", "Bulk loading exam preparations",
-                    "Declaring functional independence", "Maintaining long distance entity-relationships");
+                    "Declaring functional independence", "Maintaining long distance entity-relationships" );
 
     private static List<String> startupProblems = Arrays
             .asList("Rebuilding air quality index", "Extinguishing B+ forest fires",

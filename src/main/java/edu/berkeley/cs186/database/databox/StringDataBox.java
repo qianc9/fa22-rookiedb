@@ -10,13 +10,13 @@ public class StringDataBox extends DataBox {
     // its first m bytes. If s has fewer than m bytes, when serialized it is
     // padded with null bytes until it is exactly m bytes long.
     //
-    // - new StringDataBox("123", 5).getString() // "123"
-    // - new StringDataBox("12345", 5).getString() // "12345"
-    // - new StringDataBox("1234567", 5).getString() // "12345"
+    //   - new StringDataBox("123", 5).getString()     // "123"
+    //   - new StringDataBox("12345", 5).getString()   // "12345"
+    //   - new StringDataBox("1234567", 5).getString() // "12345"
     public StringDataBox(String s, int m) {
         if (m <= 0) {
             String msg = String.format("Cannot construct a %d-byte string. " +
-                    "Strings must be at least one byte.", m);
+                                       "Strings must be at least one byte.", m);
             throw new IllegalArgumentException(msg);
         }
         this.m = m;
@@ -34,9 +34,7 @@ public class StringDataBox extends DataBox {
     }
 
     @Override
-    public TypeId getTypeId() {
-        return TypeId.STRING;
-    }
+    public TypeId getTypeId() { return TypeId.STRING; }
 
     @Override
     public String getString() {
@@ -63,10 +61,8 @@ public class StringDataBox extends DataBox {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (!(o instanceof StringDataBox))
-            return false;
+        if (this == o) return true;
+        if (!(o instanceof StringDataBox)) return false;
         StringDataBox other = (StringDataBox) o;
         return this.s.equals(other.s);
     }
@@ -80,7 +76,7 @@ public class StringDataBox extends DataBox {
     public int compareTo(DataBox d) {
         if (!(d instanceof StringDataBox)) {
             String err = String.format("Invalid comparison between %s and %s.",
-                    toString(), d.toString());
+                                       toString(), d.toString());
             throw new IllegalArgumentException(err);
         }
         StringDataBox other = (StringDataBox) d;
