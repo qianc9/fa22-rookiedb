@@ -783,8 +783,8 @@ public class ExtraSMJTests {
         // ----------+-----------+----------
         //    "left" |         1 |         1
         //    "left" |         2 |         1
-        //    "left" |         3 |         3
-        //    "left" |         4 |         3
+        //    "left" |         3 |         2
+        //    "left" |         4 |         2
         //    "left" |         5 |         4
         //    "left" |         6 |         4
         //    "left" |         7 |         5
@@ -796,10 +796,10 @@ public class ExtraSMJTests {
         // ----------+---------+-----------+----------
         //   "right" |         1 |         1
         //   "right" |         2 |         1
-        //   "right" |         3 |         2
-        //   "right" |         4 |         2
-        //   "right" |         5 |         3
-        //   "right" |         6 |         3
+        //   "right" |         3 |         3
+        //   "right" |         4 |         3
+        //   "right" |         5 |         4
+        //   "right" |         6 |         4
         //   "right" |         7 |         6
         //   "right" |         8 |         6
         //
